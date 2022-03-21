@@ -12,9 +12,10 @@
   </head>
   <body>
     <header id="header">
+      <nav id="nav-bar" class="nav-link">
         <img id="header-img" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/57/Takamine_guitar_logo.svg/300px-Takamine_guitar_logo.svg.png" width="160" height="50" class="d-inline-block align-top" alt="">
         <div class="pos-f-t">
-       <div class="collapse" id="navbarToggleExternalContent">
+        <div class="collapse" id="navbarToggleExternalContent">
         <div class="bg-dark p-4">
           <a href="#products">
             <h4 class="text-dark">Collapsed content</h4>
@@ -29,21 +30,24 @@
             <span class="text-muted">video</span>
           </a>
         </div>
-      </div>
-      <nav id="nav-bar" class="nav-link">
+        </div>
+        </div>
+        <div>
+      <button>
         <ul>
           <a class="nav-link" href="#video"><li>video</li></a>
           <a class="nav-link" href="#products"><li>products</li></a>
-          <a class="nav-link" href="#prices"><li>prices</li></a>
+          <a class="nav-link" href="#pictures"><li>prices</li></a>
         </ul>
       </button>
       </nav>
-    </div>
+      </div>
     </header>
   <main>
     <section id="video">
-      <a href="#video">video</a>
-      <iframe id="video" width="500" height="300" src="https://www.youtube.com/embed/3aBD0EMGM1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+    <a>
+      <iframe id="video" href="#video" width="500" height="300" src="https://www.youtube.com/embed/3aBD0EMGM1Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>      
+    </a>
     </section>
     <section id="products">
       <div class="card" style="width: 18rem;">
@@ -59,36 +63,35 @@
             <h5 class="card-title">Title2</h5>
             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
             <a href="#products" class="nav-link">Product2</a>
-      <div class="container mt-5">
-        <div class="row">
-          <div class="card col-3" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
-            </div>
           </div>
-          <div class="card col-3 offset-1" style="width: 18rem;">
+          <div class="card" style="width: 18rem;">
             <img class="card-img-top" src="..." alt="Card image cap">
             <div class="card-body">
               <h5 class="card-title">Title3</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
               <a href="#products" class="nav-link">Product3</a>
             </div>
-          </div>
-          <div class="card col-3 offset-1" style="width: 18rem;">
-            <img class="card-img-top" src="..." alt="Card image cap">
-            <div class="card-body">
-              <h5 class="card-title">Card title</h5>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Title4</h5>
               <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+              <a href="#products" class="nav-link">Product4</a>
+            </div>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="..." alt="Card image cap">
+              <div class="card-body">
+              <h5 class="card-title">Title5</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+              <a href="#products" class="nav-link">Product5</a>
+              </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     </section>
-    <section id="prices">
+    <section id="pictures">
       <div id="carouselExampleControls" class="carousel slide col-8 offset-2 mt-5" data-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
@@ -111,17 +114,25 @@
         </a>
       </div>
       </section>
-      <section id="form">
-        <form id="form">
-          <p><label>Email<input></label></p>
+      <form id="form" action="https://www.freecodecamp.com/email-submit" method="POST">
+        <div>
+          <input id="name" placeholder = "Name" type=name required></input>
+          <input id="email" name="email" placeholder = "Email" type=email required></input>
           <fieldset>
-           <legend> products </legend>
-           <p><label> <input type=radio name=size> Product1 </label></p>
-           <p><label> <input type=radio name=size> Product2 </label></p>
-           <p><label> <input type=radio name=size> Product3 </label></p>
+            <legend> Choose your products </legend>
+            <p><label> <input type=checkbox name=model> Product1 </label></p>
+            <p><label> <input type=checkbox name=model> Product2 </label></p>
+            <p><label> <input type=checkbox name=model> Product3 </label></p>
           </fieldset>
-         </form>
-      </section>
+          <fieldset>
+            <p><label>Preferred delivery time: <input type=time min="08:00" max="14:00" step="900"></label></p>
+            <p><label>Delivery instructions: <textarea></textarea></label></p>
+          </fieldset>
+          <fieldset>
+              <input id="submit" type="submit">
+          </fieldset>
+        </div>
+      </form>
     </main>
     <footer>
     </footer>
