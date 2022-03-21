@@ -1,4 +1,4 @@
-/** global element styling **/
+/** global element styling 
 
 @import 'https://fonts.googleapis.com/css?family=Lato:400,700';
 
@@ -26,7 +26,7 @@ a {
   text-decoration: none;
 }
 
-/** global classes styling **/
+/** global classes styling
 
 .container {
   max-width: 1000px;
@@ -58,7 +58,7 @@ header {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  background-color: #eee;
+  background-color: rgb(44, 37, 37);
 }
 
 @media (max-width: 600px) {
